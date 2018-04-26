@@ -1,28 +1,28 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   TouchableHighlight,
   Text,
   View,
-} from 'react-native'
+} from 'react-native';
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = { count: 0 }
-  }
+  };
 
   plus = () => {
     this.setState({
       count: this.state.count + 1
     })
-  }
+  };
   minus = () => {
     this.setState({
       count: this.state.count - 1
     })
-  }
+  };
 
   render() {
     return (
@@ -48,11 +48,10 @@ export default class App extends Component {
             <Text style={[styles.text]}> + </Text>
           </TouchableHighlight>
         </View>
-
       </View>
     )
-  }
-}
+  };
+};
 
 const styles = StyleSheet.create({
   container: {
