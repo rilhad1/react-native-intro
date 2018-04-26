@@ -28,7 +28,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={[styles.countContainer]}>
-          <Text style={[styles.countText]}>
+          <Text style={[styles.text]}>
             {this.state.count !== 0 ? this.state.count : null}
           </Text>
         </View>
@@ -38,14 +38,14 @@ export default class App extends Component {
             onPress={this.minus}
             underlayColor='#b7c879'
           >
-            <Text style={[styles.butText]}> - </Text>
+            <Text style={[styles.text]}> - </Text>
           </TouchableHighlight>
           <TouchableHighlight
             style={styles.button}
             onPress={this.plus}
             underlayColor='#b7c879'
           >
-            <Text style={[styles.butText]}> + </Text>
+            <Text style={[styles.text]}> + </Text>
           </TouchableHighlight>
         </View>
 
@@ -74,10 +74,6 @@ const styles = StyleSheet.create({
     width: '50%',
     height: '100%'
   },
-  butText:{
-    color: 'black',
-    fontSize: 45
-  },
   countContainer: {
     height: '30%',
     width: '100%',
@@ -86,7 +82,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6D155',
     paddingTop: '35%'
   },
-  countText: {
+  text: {
     color: 'black',
     fontSize: 45
   }
