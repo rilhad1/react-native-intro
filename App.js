@@ -18,6 +18,7 @@ export default class App extends Component {
       count: this.state.count + 1
     })
   };
+
   minus = () => {
     this.setState({
       count: this.state.count - 1
@@ -27,25 +28,25 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.countContainer]}>
-          <Text style={[styles.text]}>
+        <View style={styles.countContainer}>
+          <Text style={styles.text}>
             {this.state.count !== 0 ? this.state.count : null}
           </Text>
         </View>
-        < View style={[styles.containerBut]}>
+        < View style={styles.containerBut}>
           <TouchableHighlight
             style={styles.button}
             onPress={this.minus}
             underlayColor='#b7c879'
           >
-            <Text style={[styles.text]}> - </Text>
+            <Text style={styles.text}>-</Text>
           </TouchableHighlight>
           <TouchableHighlight
             style={styles.button}
             onPress={this.plus}
             underlayColor='#b7c879'
           >
-            <Text style={[styles.text]}> + </Text>
+            <Text style={[styles.text]}>+</Text>
           </TouchableHighlight>
         </View>
       </View>
